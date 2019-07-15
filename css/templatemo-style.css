@@ -965,3 +965,15 @@ body.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
+#icon1 {
+  margin-left: 9px;
+}
+
+#icon2 {
+  margin-left: 19px;
+}
+
+#icon3 {
+  margin-left: 30px;
+}
