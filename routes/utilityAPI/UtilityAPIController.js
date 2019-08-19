@@ -109,6 +109,14 @@ router.post('/addevent', function (req, res) {
 })
 
 
+router.get('/getevents', function (req, res) {
+    Event.find({}, { _id: 0, __v: 0 }).then((data) => {
+        res.status(200).send({ data: data });
+    }).catch((err) => {
+        res.status(500).send({ message: err.toString() });
+    })
+})
+
 
 
 

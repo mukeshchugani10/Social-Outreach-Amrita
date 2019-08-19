@@ -90,6 +90,7 @@ function addEvent() {
         data: JSON.stringify(data),
         success: function (res, textStatus, xmLHttpRequest) {
             alert(res.message)
+            location.reload()
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.responseJSON.message)
@@ -142,6 +143,20 @@ $(document).ready(function () {
         },
         error: function (xhr, ajaxOptions, thrownError) {
             console.log(xhr);
+            alert('Some error has occured please try again after some time')
+            window.location.pathname = '/admin';
+        },
+    });
+
+    $.ajax({
+        async: true,
+        url: "/api/utility/getevents",
+        method: "GET",
+        success: function (res, textStatus, xmLHttpRequest) {
+                 
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.responseJSON.message);
             alert('Some error has occured please try again after some time')
             window.location.pathname = '/admin';
         },
