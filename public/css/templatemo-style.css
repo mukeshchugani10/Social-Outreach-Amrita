@@ -978,7 +978,7 @@ body.lb-disable-scrolling {
   margin-left: 30px;
 }
 
-#event_descr {
+#event_descr, #heading {
   resize: none;
   width: 97%;
   margin-bottom: 10px;
