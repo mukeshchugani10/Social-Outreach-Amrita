@@ -31,6 +31,8 @@ function addPhoto() {
     var file = files[0];
     var fileName = file.name;
     var photoKey = fileName;
+    $("#addphoto").attr('class', "btn ld-ext-right running");
+    $("#addphoto").html(`Uploading <div class="ld ld-ring ld-spin"></div>`);
     s3.upload({
         Key: photoKey,
         Body: file,
@@ -40,8 +42,10 @@ function addPhoto() {
             return alert('There was an error uploading your photo: ', err.message);
         }
         currentPhotoUrl = s3Url + encodeURIComponent(photoKey)
+        $("#addphoto").attr('class', "btn ld-ext-right");
+        $("#addphoto").html("Uploaded");
+        $("#addphoto").attr('disabled',true);
         alert('Successfully uploaded photo.');
-        //   addEvent()
     });
 }
 
@@ -59,12 +63,12 @@ function addEvent() {
     urlelem.innerHTML = currentPhotoUrl
     rootElem.appendChild(urlelem)
 
-    var headingelem = doc.createElement("heading");
-    headingelem.innerHTML = document.getElementById("heading").textContent.trim()
+    var headingelem = doc.createElement("title");
+    headingelem.innerHTML = document.getElementById("heading").value;
     rootElem.appendChild(headingelem)
 
     var textelem = doc.createElement("text");
-    textelem.innerHTML = document.getElementById("event_descr").textContent.trim()
+    textelem.innerHTML = document.getElementById("event_descr").value;
     rootElem.appendChild(textelem)
 
     doc.appendChild(rootElem);
@@ -95,6 +99,8 @@ function addEvent() {
 }
 
 $(document).ready(function () {
+    document.getElementById("event_descr").value = "";
+    document.getElementById("heading").value = "";
     $.ajax({
         async: true,
         url: "/api/utility/allsponsor",

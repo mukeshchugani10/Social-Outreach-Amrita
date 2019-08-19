@@ -75,7 +75,7 @@ let xsd = `<?xml version="1.0" encoding="utf-8"?>
 		<xs:complexType>
 			<xs:sequence>
                 <xs:element name="url" type="xs:string" />
-                <xs:element name="heading" type="xs:string" />
+                <xs:element name="title" type="xs:string" />
 				<xs:element name="text" type="xs:string" />
 			</xs:sequence>
 		</xs:complexType>
@@ -84,7 +84,6 @@ let xsd = `<?xml version="1.0" encoding="utf-8"?>
 
 
 router.post('/addevent', function (req, res) {
-    console.log(req.body)
     try {
         let xmlString = libxmljs.parseXml(req.body.doc)
         let xsdDoc = libxmljs.parseXml(xsd)

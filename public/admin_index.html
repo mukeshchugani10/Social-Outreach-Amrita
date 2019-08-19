@@ -12,6 +12,9 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/loading.css"/>
+        <link rel="stylesheet" type="text/css" href="css/loading-btn.css"/>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/fontAwesome.css">
         <link rel="stylesheet" href="css/templatemo-style.css">
@@ -80,13 +83,31 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="content second-content">
-                        <input id="photoupload" type="file" accept="image/*">
-                        <button id="addphoto" onclick="addPhoto()">
-                          Upload Photo
+                        <h4 style="margin-top: 2%;padding-left: 1%;padding-right: 1%;">This module enables you to add social events to the user-facing webpage. For each event, an image along with a description can be added. The description text will appear as it is here.</h4> 
+                        <div>
+                          <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Select the image which is to be displayed as the event cover:</p>
+                          <input id="photoupload" type="file" accept="image/*" style="display: inline;">
+                        </div>
+                        <div>
+                          <button id="addphoto" onclick="addPhoto()" class="btn ld-ext-right" style="color: #000;background-color: #ffbb05;margin-bottom: 10px;">
+                            <!-- Add "running" class to button tag to show the loading icon. -->
+                            Upload Photo
+                            <div class="ld ld-ring ld-spin"></div>
                           </button>
-                          <textarea id="eventtext" name="message" rows="10" cols="30">
-                            The cat was playing in the garden.
-                            </textarea>
+                        </div>
+                        <div>
+                          <textarea name="heading" rows="2" placeholder="Event Title" id="heading" wrap="off">
+                          </textarea>
+                        </div>
+                        <div>
+                          <textarea name="message" rows="10" placeholder="Event Description" id="event_descr" wrap="off">
+                          </textarea>
+                        </div>
+                        <div>
+                          <button id="submit_event" onclick="addEvent()" class="btn ld-ext-right" style="color: #000;background-color: #ffbb05;margin-bottom: 10px;">
+                            Publish
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>                  

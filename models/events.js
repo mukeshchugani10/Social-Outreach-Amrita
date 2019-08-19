@@ -4,9 +4,9 @@ var EventSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    headng: {
+    heading: {
         type: String,
-        required: true,
+        required: true
     },
     text: {
         type: String,
