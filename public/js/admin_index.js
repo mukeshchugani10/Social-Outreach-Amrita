@@ -147,19 +147,4 @@ $(document).ready(function () {
             window.location.pathname = '/admin';
         },
     });
-
-    $.ajax({
-        async: true,
-        url: "/api/utility/getevents",
-        method: "GET",
-        success: function (res, textStatus, xmLHttpRequest) {
-                 
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            console.log(xhr.responseJSON.message);
-            alert('Some error has occured please try again after some time')
-            window.location.pathname = '/admin';
-        },
-    });
-
 });
