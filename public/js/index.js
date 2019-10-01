@@ -88,4 +88,11 @@ $(document).ready(function () {
       alert('Some error has occured please try again after some time')
     },
   });
+
+
+  
+
+
+
+
 });

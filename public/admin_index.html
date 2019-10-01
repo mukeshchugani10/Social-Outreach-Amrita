@@ -2,284 +2,377 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Admin - Social Outreach</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/loading.css"/>
-        <link rel="stylesheet" type="text/css" href="css/loading-btn.css"/>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/fontAwesome.css">
-        <link rel="stylesheet" href="css/templatemo-style.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Admin - Social Outreach</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/loading.css" />
+  <link rel="stylesheet" type="text/css" href="css/loading-btn.css" />
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/fontAwesome.css">
+  <link rel="stylesheet" href="css/templatemo-style.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.js"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css" rel="stylesheet"></link>
- 
-        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-    </head>
-    <body>
+  <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
 
-        <div class="overlay"></div>
-        <section class="top-part">
-            <img src="img/coimbatore_campus17.jpg">
-        </section>
-        
-        <section class="cd-hero">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css" rel="stylesheet">
+  </link>
 
-          <div class="cd-slider-nav">
-            <nav>
-              <span class="cd-marker item-1"></span>
-              <ul>
-                <li class="selected"><a href="#0"><div class="image-icon"><img src="img/home-icon.png"></div><h6>Welcome</h6></a></li>
-                <li><a href="#0"><div class="image-icon" id="icon1"><img src="img/add-event.png"></div><h6>Add Events</h6></a></li>
-                <li><a href="#0"><div class="image-icon" id="icon2"><img src="img/rupee-indian.png"></div><h6>View Sponsors</h6></a></li>
-                <li><a href="#0"><div class="image-icon" id="icon3"><img src="img/volunteer-icon.png"></div><h6>View Volunteers</h6></a></li>
-              </ul>
-            </nav> 
-          </div> <!-- .cd-slider-nav -->
+  <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+</head>
 
-          <ul class="cd-hero-slider">
+<body>
 
-            <li class="selected">
-              <div class="heading">
-                <h1>AMRITA SCHOOL OF ENGINEERING</h1>
-                <span>Welcome To The Department of Computer Science and Engineering</span>
-              </div>
-              <div class="cd-full-width first-slide">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="content first-content">
-                        <h4>About The Social Activities Undertaken</h4>
-                        <p>Hello, Admin. Welcome to the Administrator portal. Here you can make changes and control what is displayed on the actual website.</p> 
-                          <a href="#">Discover More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>                  
+  <div class="overlay"></div>
+  <section class="top-part">
+    <img src="img/coimbatore_campus17.jpg">
+  </section>
+
+  <section class="cd-hero">
+
+    <div class="cd-slider-nav">
+      <nav>
+        <span class="cd-marker item-1"></span>
+        <ul>
+          <li class="selected"><a href="#0">
+              <div class="image-icon"><img src="img/home-icon.png"></div>
+              <h6>Welcome</h6>
+            </a></li>
+          <li><a href="#0">
+              <div class="image-icon" id="icon1"><img src="img/add-event.png"></div>
+              <h6>Add Events</h6>
+            </a></li>
+          <li id="li-sponsor"><a href="#0">
+              <div class="image-icon" id="icon2"><img src="img/rupee-indian.png"></div>
+              <h6>View Sponsors</h6>
+            </a></li>
+          <li id="li-volunteer"><a href="#0">
+              <div class="image-icon" id="icon3"><img src="img/volunteer-icon.png"></div>
+              <h6>View Volunteers</h6>
+            </a></li>
+        </ul>
+      </nav>
+    </div> <!-- .cd-slider-nav -->
+
+    <ul class="cd-hero-slider">
+
+      <li class="selected">
+        <div class="heading">
+          <h1>AMRITA SCHOOL OF ENGINEERING</h1>
+          <span>Welcome To The Department of Computer Science and Engineering</span>
+        </div>
+        <div class="cd-full-width first-slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="content first-content">
+                  <h4>About The Social Activities Undertaken</h4>
+                  <p>Hello, Admin. Welcome to the Administrator portal. Here you can make changes and control what is
+                    displayed on the actual website.</p>
+                  <a href="#">Discover More</a>
                 </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="heading">
-                <h1>Add Events</h1>
-                <span>Add information regarding social events</span> 
-              </div>
-              <div class="cd-half-width second-slide">   
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="content second-content">
-                        <h4 style="margin-top: 2%;padding-left: 1%;padding-right: 1%;">This module enables you to add social events to the user-facing webpage. For each event, an image along with a description can be added. The description text will appear as it is here.</h4> 
-                        <div>
-                          <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Select the image which is to be displayed as the event cover:</p>
-                          <input id="photoupload" type="file" accept="image/*" style="display: inline;">
-                        </div>
-                        <div>
-                          <button id="addphoto" onclick="addPhoto()" class="btn ld-ext-right" style="color: #000;background-color: #ffbb05;">
-                            <!-- Add "running" class to button tag to show the loading icon. -->
-                            Upload Photo
-                            <div class="ld ld-ring ld-spin"></div>
-                          </button>
-                        </div>
-                        <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please assign Sponsors and Volunteers for this event:</p>
-                        <div id='multi-select'>
-                          <select id="single-optgroups" multiple>
-                            <optgroup label="Sponsors">
-                              <option value="value 1">Angular</option>
-                              <option value="value 2">React</option>
-                              <option value="value 3">Vue</option>
-                            </optgroup>
-                            <optgroup label="Volunteers">
-                              <option value="value 4">Bootstrap</option>
-                              <option value="value 5">Foundation</option>
-                              <option value="value 6">Bulma</option>
-                            </optgroup>
-                          </select>
-                        </div>
-                        <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter the event title:</p>
-                        <div>
-                          <textarea name="heading" rows="2" placeholder="Event Title" id="heading" wrap="off">
-                          </textarea>
-                        </div>
-                        <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter a brief description to be shown with the preview of the event:</p>
-                        <div>
-                          <textarea name="message" rows="5" placeholder=" Short Event Description" id="event_descr" wrap="off">
-                          </textarea>
-                        </div>
-                        <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter a detailed description of the event.</p>
-                        <div>
-                          <textarea name="long_message" rows="10" placeholder=" Comprehensive Event Description" id="event_descr_long" wrap="off">
-                          </textarea>
-                        </div>
-                        <div>
-                          <button id="submit_event" onclick="addEvent()" class="btn ld-ext-right" style="color: #000;background-color: #ffbb05;margin-bottom: 10px;">
-                            Publish
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>                  
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="heading">
-                <h1>Registered Sponsors</h1>
-                <span>View and Edit info. regarding sponsors</span> 
-              </div>
-              <div class="cd-half-width third-slide">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="content third-content">
-                        <table id="sponsor" class="display">
-                          <!--  add these attributes to the button : data-toggle="modal" data-target="#Modal_sponsor" -->
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Modal -->
-                  <div class="modal fade" id="Modal_sponsor" role="dialog">
-                    <div class="modal-dialog">
-                    
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Assign this sponsor to an event.</h4>
-                        </div>
-                        <div class="modal-body">
-                          <div id='single-select-sponsor'>
-                            <select id="single-sponsor">
-                              <option value="value 1">Angular</option>
-                              <option value="value 2">React</option>
-                              <option value="value 3">Vue</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>                  
-              </div>
-            </li>
-
-            <li>
-              <div class="heading">
-                <h1>Registered Volunteers</h1>
-                <span>View and Edit info. regarding registered volunteers</span> 
-              </div>
-              <div class="cd-half-width fourth-slide">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="content fourth-content">
-                        <div class="row">
-                          <table id="volunteer" class="display">
-                            <!--  add these attributes to the button : data-toggle="modal" data-target="#Modal_volunteer" -->
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Modal -->
-                  <div class="modal fade" id="Modal_volunteer" role="dialog">
-                    <div class="modal-dialog">
-                    
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Assign this volunteer to an event.</h4>
-                        </div>
-                        <div class="modal-body">
-                          <div id='single-select-volunteer'>
-                            <select id="single-volunteer">
-                              <option value="value 1">Angular</option>
-                              <option value="value 2">React</option>
-                              <option value="value 3">Vue</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>                  
-                </div>
-              </div>
-            </li>
-          </ul> <!-- .cd-hero-slider -->
-        </section> <!-- .cd-hero -->
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
-              </div>
-              <div class="modal-body">
-                <p>Some text in the modal.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
             </div>
-            
           </div>
         </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="heading">
+          <h1>Add Events</h1>
+          <span>Add information regarding social events</span>
+        </div>
+        <div class="cd-half-width second-slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="content second-content">
+                  <h4 style="margin-top: 2%;padding-left: 1%;padding-right: 1%;">This module enables you to add social
+                    events to the user-facing webpage. For each event, an image along with a description can be added.
+                    The description text will appear as it is here.</h4>
+                  <div>
+                    <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Select the image
+                      which is to be displayed as the event cover:</p>
+                    <input id="photoupload" type="file" accept="image/*" style="display: inline;">
+                  </div>
+                  <div>
+                    <button id="addphoto" onclick="addPhoto()" class="btn ld-ext-right"
+                      style="color: #000;background-color: #ffbb05;">
+                      <!-- Add "running" class to button tag to show the loading icon. -->
+                      Upload Photo
+                      <div class="ld ld-ring ld-spin"></div>
+                    </button>
+                  </div>
+                  <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please assign
+                    Sponsors and Volunteers for this event:</p>
+                  <div id='multi-select'>
+                    <select id="single-optgroups" multiple>
+                    </select>
+                  </div>
+                  <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter the
+                    event title:</p>
+                  <div>
+                    <textarea name="heading" rows="2" placeholder="Event Title" id="heading" wrap="off">
+                          </textarea>
+                  </div>
+                  <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter a
+                    brief description to be shown with the preview of the event:</p>
+                  <div>
+                    <textarea name="message" rows="5" placeholder=" Short Event Description" id="event_descr"
+                      wrap="off">
+                          </textarea>
+                  </div>
+                  <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter a
+                    detailed description of the event.</p>
+                  <div>
+                    <textarea name="long_message" rows="10" placeholder=" Comprehensive Event Description"
+                      id="event_descr_long" wrap="off">
+                          </textarea>
+                  </div>
+                  <div>
+                    <button id="submit_event" onclick="addEvent()" class="btn ld-ext-right"
+                      style="color: #000;background-color: #ffbb05;margin-bottom: 10px;">
+                      Publish
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="heading">
+          <h1>Registered Sponsors</h1>
+          <span>View and Edit info. regarding sponsors</span>
+        </div>
+        <div class="cd-half-width third-slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="content third-content">
+                  <table id="sponsor" class="display">
+                    <!--  add these attributes to the button : data-toggle="modal" data-target="#Modal_sponsor" -->
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="heading">
+          <h1>Registered Volunteers</h1>
+          <span>View and Edit info. regarding registered volunteers</span>
+        </div>
+        <div class="cd-half-width fourth-slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="content fourth-content">
+                  <div class="row">
+                    <table id="volunteer" class="display">
+                      <!--  add these attributes to the button : data-toggle="modal" data-target="#Modal_volunteer" -->
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul> <!-- .cd-hero-slider -->
+
+  </section> <!-- .cd-hero -->
+
+  <!-- Modal
+  <div class="modal fade" id="Modal_sponsor" role="dialog">
+    <div class="modal-dialog">
+
+      Modal content
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Assign this sponsor to an event.</h4>
+        </div>
+        <div class="modal-body">
+          <div id='single-select-sponsor'>
+            <select id="single-sponsor">
+              <option value="value 1">Angular</option>
+              <option value="value 2">React</option>
+              <option value="value 3">Vue</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal_volunteer" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Assign this volunteer to an event.</h4>
+        </div>
+        <div class="modal-body">
+          <div id='single-select-volunteer'>
+            <select id="single-sponsor">
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="assignevent()">Assign</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
 
 
-        <footer>
-          <p> Amrita Vishwa Vidyapeetham
-                                
-        	| Designed by <em>Dept. of CSE</em></p>
-        </footer>
-    
-        
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <footer>
+    <p> Amrita Vishwa Vidyapeetham
 
-        <script type="text/javascript">
-          new SlimSelect({
-              select: '#single-optgroups'
-          })
-          new SlimSelect({
-              select: '#single-sponsor'
-          })
-        </script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/admin_index.js"></script>
+      | Designed by <em>Dept. of CSE</em></p>
+  </footer>
 
 
-    </body>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+  <script type="text/javascript">
+
+    var mainsel;
+    var eventsel;
+
+
+    $.ajax({
+      async: true,
+      url: "/api/utility/getevents",
+      method: "GET",
+      success: function (res, textStatus, xmLHttpRequest) {
+        var fineve = [];
+        res.data.forEach(element => {
+          fineve.push({ text: element.heading, value: element.url });
+        });
+        eventsel = new SlimSelect({
+          select: '#single-sponsor',
+          data: fineve
+        });
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.responseJSON.message);
+        alert('Some error has occured please try again after some time')
+      },
+    });
+
+
+    $.ajax({
+      async: true,
+      url: "/api/utility/getunsponsor",
+      method: "GET",
+      success: function (res, textStatus, xmLHttpRequest) {
+        let obj = res.data;
+        let finspon = [];
+        for (let i = 0; i < obj.length; i++) {
+          //fin += `<option value="${obj[i].email}">${obj[i].name}</option>`
+          finspon.push({ text: obj[i].name, value: obj[i].email + "$sponsor" });
+        }
+
+        $.ajax({
+          async: true,
+          url: "/api/utility/getunvolunteer",
+          method: "GET",
+          success: function (res, textStatus, xmLHttpRequest) {
+            let obj = res.data;
+            let finvol = [];
+            for (let i = 0; i < obj.length; i++) {
+              //fin += `<option value="${obj[i].email}">${obj[i].name}</option>`
+              finvol.push({ text: obj[i].name, value: obj[i].email + "$volunteer" });
+            }
+
+            mainsel = new SlimSelect({
+              select: '#single-optgroups',
+              data: [
+                {
+                  label: 'Sponsors',
+                  options: finspon
+                },
+                {
+                  label: 'Volunteers',
+                  options: finvol
+                }
+              ]
+            })
+
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.responseJSON.message);
+            alert('Some error has occured please try again after some time')
+          },
+        });
+
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.responseJSON.message);
+        alert('Some error has occured please try again after some time')
+      },
+    });
+
+
+  </script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin_index.js"></script>
+
+
+</body>
+
 </html>

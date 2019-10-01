@@ -108,6 +108,7 @@ router.post('/addevent', function (req, res) {
         let xmlString = libxmljs.parseXml(req.body.doc)
         let xsdDoc = libxmljs.parseXml(xsd)
         let result = xmlString.validate(xsdDoc);
+        console.log(req.body.doc);
         if (result == true) {
             var event = {
                 url: xmlString.root().childNodes()[0].text(),
@@ -270,7 +271,7 @@ router.post('/getevent', function(req,res){
 
 async function getUnassignedSponsor(){
     var A = await EventSponsor.find({});
-    var emails =  A.filter((x) => {
+    var emails =  A.map((x) => {
         return x.email;
     })
     var B = await Sponsor.find({ email : { $nin : emails}});
@@ -289,7 +290,7 @@ router.get('/getunsponsor',function(req,res) {
 
 async function getUnassignedVolunteer(){
     var A = await EventVolunteer.find({});
-    var emails =  A.filter((x) => {
+    var emails =  A.map((x) => {
         return x.email;
     })
     var B = await Volunteer.find({ email : { $nin : emails}});
@@ -307,7 +308,7 @@ router.get('/getunvolunteer',function(req,res) {
 router.post('/volunteerevent',function(req,res){
     EventVolunteer.findOne({email : req.body.email}).then((data) => {
         if(!data) {
-            res.status(200).send({ name : "<button>Assign Events</button>"});
+            res.status(200).send({ name : `<button data-toggle="modal" data-target="#Modal_volunteer" onclick="setvolemail('${req.body.email}')">Assign Event</button>`});
         }else{
             Event.findOne({ url : data.url}).then((doc) => {
                 res.status(200).send({ name : doc.heading});
@@ -321,7 +322,7 @@ router.post('/volunteerevent',function(req,res){
 router.post('/sponsorevent',function(req,res){
     EventSponsor.findOne({email : req.body.email}).then((data) => {
         if(!data) {
-            res.status(200).send({ name : "<button>Assign Events</button>"});
+            res.status(200).send({ name : `<button data-toggle="modal" data-target="#Modal_volunteer" onclick="setsponemail('${req.body.email}')">Assign Event</button>`});
         }else{
             Event.findOne({ url : data.url}).then((doc) => {
                 res.status(200).send({ name : doc.heading});
