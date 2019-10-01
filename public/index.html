@@ -35,16 +35,23 @@
             <nav>
               <span class="cd-marker item-1"></span>
               <ul>
+                <li style="visibilty: hidden"></li>
                 <li class="selected"><a href="#0"><div class="image-icon"><img src="img/home-icon.png"></div><h6>Welcome</h6></a></li>
                 <li><a href="#0"><div class="image-icon"><img src="img/about-icon.png"></div><h6>About Us</h6></a></li>
                 <li><a href="#0"><div class="image-icon"><img src="img/event.png"></div><h6>Events</h6></a></li>
                 <li><a href="#0"><div class="image-icon"><img src="img/rupee-indian.png"></div><h6>Sponsor</h6></a></li>
-                  <li><a href="#0"><div class="image-icon"><img src="img/volunteer-icon.png"></div><h6>Volunteer</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/volunteer-icon.png"></div><h6>Volunteer</h6></a></li>
+                <li style="visibilty: hidden" id="hidden-li"></li>
               </ul>
             </nav> 
           </div> <!-- .cd-slider-nav -->
 
           <ul class="cd-hero-slider">
+
+
+            <li>
+              <p>Hi</p>
+            </li>
 
             <li class="selected">
               <div class="heading">
@@ -58,7 +65,7 @@
                       <div class="content first-content">
                         <h4>About The Social Activities Undertaken</h4>
                         <p>Amrita School of Engineering hosts an amalgamation of culture and technology towards social empowerment. We acredit the establishment of the clubs to our Chancellor Sri Mata Amritanandamayi Devi.</p> 
-                          <a href="#">Discover More</a>
+                          <a id="discover">Discover More</a>
                         </div>
                       </div>
                     </div>
@@ -240,6 +247,24 @@
                 </div>
               </div>
             </li>
+
+            <li>
+              <div class="heading">
+                <h1>Featured Events</h1>
+                <span>Have a look at our social events</span> 
+              </div>
+              <div class="cd-half-width third-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div id="eventslist" class="content third-content">
+                          No Events
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </li>
           </ul> <!-- .cd-hero-slider -->
         </section> <!-- .cd-hero -->
 
@@ -256,6 +281,12 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <script type="text/javascript">
+          $("#discover").on("click",function(e){
+            $("#hidden-li").click()
+          })
+        </script>
 
     </body>
 </html>
