@@ -26,6 +26,9 @@
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
         <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css" rel="stylesheet"></link>
  
         <script type="text/javascript" src="DataTables/datatables.min.js"></script>
     </head>
@@ -89,18 +92,40 @@
                           <input id="photoupload" type="file" accept="image/*" style="display: inline;">
                         </div>
                         <div>
-                          <button id="addphoto" onclick="addPhoto()" class="btn ld-ext-right" style="color: #000;background-color: #ffbb05;margin-bottom: 10px;">
+                          <button id="addphoto" onclick="addPhoto()" class="btn ld-ext-right" style="color: #000;background-color: #ffbb05;">
                             <!-- Add "running" class to button tag to show the loading icon. -->
                             Upload Photo
                             <div class="ld ld-ring ld-spin"></div>
                           </button>
                         </div>
+                        <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please assign Sponsors and Volunteers for this event:</p>
+                        <div id='multi-select'>
+                          <select id="single-optgroups" multiple>
+                            <optgroup label="Sponsors">
+                              <option value="value 1">Angular</option>
+                              <option value="value 2">React</option>
+                              <option value="value 3">Vue</option>
+                            </optgroup>
+                            <optgroup label="Volunteers">
+                              <option value="value 4">Bootstrap</option>
+                              <option value="value 5">Foundation</option>
+                              <option value="value 6">Bulma</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                        <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter the event title:</p>
                         <div>
                           <textarea name="heading" rows="2" placeholder="Event Title" id="heading" wrap="off">
                           </textarea>
                         </div>
+                        <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter a brief description to be shown with the preview of the event:</p>
                         <div>
-                          <textarea name="message" rows="10" placeholder="Event Description" id="event_descr" wrap="off">
+                          <textarea name="message" rows="5" placeholder=" Short Event Description" id="event_descr" wrap="off">
+                          </textarea>
+                        </div>
+                        <p style="margin-top: 3%;text-align: left;padding-left: 1%;display: inline-block;">Please enter a detailed description of the event.</p>
+                        <div>
+                          <textarea name="long_message" rows="10" placeholder=" Comprehensive Event Description" id="event_descr_long" wrap="off">
                           </textarea>
                         </div>
                         <div>
@@ -125,13 +150,39 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="content third-content">
-                          <table id="sponsor" class="display">
+                        <table id="sponsor" class="display">
+                          <!--  add these attributes to the button : data-toggle="modal" data-target="#Modal_sponsor" -->
                         </table>
                       </div>
-                      </div>
                     </div>
-                  </div>                  
-                </div>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="Modal_sponsor" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Assign this sponsor to an event.</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div id='single-select-sponsor'>
+                            <select id="single-sponsor">
+                              <option value="value 1">Angular</option>
+                              <option value="value 2">React</option>
+                              <option value="value 3">Vue</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>                  
               </div>
             </li>
 
@@ -147,9 +198,36 @@
                       <div class="content fourth-content">
                         <div class="row">
                           <table id="volunteer" class="display">
-                        </table>
+                            <!--  add these attributes to the button : data-toggle="modal" data-target="#Modal_volunteer" -->
+                          </table>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="Modal_volunteer" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Assign this volunteer to an event.</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div id='single-select-volunteer'>
+                            <select id="single-volunteer">
+                              <option value="value 1">Angular</option>
+                              <option value="value 2">React</option>
+                              <option value="value 3">Vue</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>                  
                 </div>
@@ -189,6 +267,14 @@
         
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
+        <script type="text/javascript">
+          new SlimSelect({
+              select: '#single-optgroups'
+          })
+          new SlimSelect({
+              select: '#single-sponsor'
+          })
+        </script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
