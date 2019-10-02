@@ -97,6 +97,7 @@ let xsd = `<?xml version="1.0" encoding="utf-8"?>
                 <xs:element name="text" type="xs:string" />
                 <xs:element name="volunteer" type="xs:string" />
                 <xs:element name="sponsor" type="xs:string" />
+                <xs:element name="longtext" type="xs:string" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -113,7 +114,8 @@ router.post('/addevent', function (req, res) {
             var event = {
                 url: xmlString.root().childNodes()[0].text(),
                 heading: xmlString.root().childNodes()[1].text(),
-                text: xmlString.root().childNodes()[2].text()
+                text: xmlString.root().childNodes()[2].text(),
+                longtext : xmlString.root().childNodes()[5].text()
             }
             
             var volunteer =  xmlString.root().childNodes()[3].text().split(",");

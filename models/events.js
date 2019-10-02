@@ -11,6 +11,10 @@ var EventSchema = new mongoose.Schema({
     text: {
         type: String,
         required: true
+    },
+    longtext: {
+        type: String,
+        required: true
     }
 });
 mongoose.model('Event', EventSchema);

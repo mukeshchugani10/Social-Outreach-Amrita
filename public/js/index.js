@@ -19,12 +19,12 @@ function getDivString(index, url, title, text) {
       <h4>${title}</h4>
       <p>${text}</p>
       <div class="primary-button">
-        <a href="#">Discover More</a>
+        <a onclick="loadevent('${url}')">Discover More</a>
       </div>
     </div>
   </div>
 </div>`
-return string;
+    return string;
   } else {
     var string = `<div class="row" style="margin-bottom: 3%;">
     <div class="col-md-5">
@@ -32,7 +32,7 @@ return string;
         <h4>${title}</h4>
         <p>${text}</p>
         <div class="primary-button">
-          <a href="#">Discover More</a>
+          <a onclick="loadevent('${url}')">Discover More</a>
         </div>
       </div>
     </div>
@@ -40,9 +40,42 @@ return string;
       <img src="${url}" style="margin-top: 50px; height:305px;">
     </div>
   </div>`
-  return string;
+    return string;
   }
 
+}
+
+function loadevent(url) {
+  $.ajax({
+    async: true,
+    url: "/api/utility/getevent",
+    method: "POST",
+    data: { url: url },
+    success: function (res, textStatus, xmLHttpRequest) {
+      $('#event-title').html(res.event.heading);
+      $('#event-image').prop('src',res.event.url);
+      $('#event-text').html(res.event.longtext);
+      var sponli = "";
+      res.sponsor.forEach(element => {
+        sponli += element.sponsordetails[0].name;
+        sponli += "<br>"
+      });
+
+      var volli = "";
+      res.volunteer.forEach(element => {
+        volli += element.volunteerdetails[0].name;
+        volli += "<br>"
+      });
+
+      $('#event-volunteer').html(volli);
+      $('#event-sponsor').html(sponli);
+      $("#hidden-li").click()
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+      console.log(xhr.responseJSON.message);
+      alert('Some error has occured please try again after some time')
+    },
+  });
 }
 
 $(document).ready(function () {
@@ -77,8 +110,8 @@ $(document).ready(function () {
     success: function (res, textStatus, xmLHttpRequest) {
       let obj = res.data;
       let fin = "";
-      for(let i=0;i<obj.length;i++){
-        fin += getDivString(i,obj[i].url,obj[i].heading,obj[i].text)
+      for (let i = 0; i < obj.length; i++) {
+        fin += getDivString(i, obj[i].url, obj[i].heading, obj[i].text)
       }
       console.log(fin)
       document.getElementById("eventslist").innerHTML = fin;
@@ -90,7 +123,7 @@ $(document).ready(function () {
   });
 
 
-  
+
 
 
 

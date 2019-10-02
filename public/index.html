@@ -249,8 +249,8 @@
             </li>
             <li>
               <div class="heading">
-                <h1>Featured Events</h1>
-                <span>Have a look at our social events</span> 
+                <h1>Event Details</h1>
+                <!-- <span>Have a look at our social events</span>  -->
               </div>
               <div class="cd-half-width third-slide">
                 <div class="container">
@@ -259,25 +259,18 @@
                       <div class="content third-content">
                           <h4 style="margin-top: 2%;padding-left: 1%;padding-right: 1%;font-size: 30px;margin-bottom: 5%;" id="event-title">Event title</h4>
                           <div class="row">
-                            <img src="img/tp1.jpg" style="margin-bottom: 5%;">
+                            <img id='event-image' src="img/tp1.jpg" style="margin-bottom: 5%; margin-top: 50px; height:305px;">
                           </div>
                           <div class="row">
                             <div class="column left" style="background-color: rgb(240,240,240);">
                               <h4>Volunteers</h4>
-                              V1<br>
-                              V2<br>
-                              V3<br>
-                              <h4>Sponsors</h4>
-                              S1<br>
-                              S2<br>
-                              S3<br>
+                              <p id="event-volunteer"></p>
+                              <h4 >Sponsors</h4>
+                              <p id="event-sponsor"></p>
                             </div>
                             <div class="column right">
-                               <p style="font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit cursus dui, non lobortis diam luctus eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam sit amet mi eget magna tristique malesuada. Curabitur non ligula id neque tincidunt consequat ut sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque dapibus ut lectus ac tempus. Nunc non felis velit.</p>
-
-                               <p style="font-weight: bold;">Nulla ex risus, eleifend at ante non, mollis varius mauris. Suspendisse potenti. Phasellus vel tristique ex. Praesent id diam at libero congue maximus. Donec faucibus ipsum ex, vulputate interdum leo euismod scelerisque. Sed imperdiet consectetur ligula. Sed ac nunc facilisis, efficitur urna sit amet, volutpat felis. Vivamus pharetra laoreet ipsum, eget commodo ipsum mollis at. Proin eros purus, porttitor vel pharetra nec, rutrum sit amet metus. Cras id suscipit neque. Proin vehicula eu ante sit amet sagittis. Pellentesque mattis nunc at nisl efficitur, sit amet ultricies quam convallis. Etiam vulputate a magna vel feugiat. Ut rutrum, eros vitae molestie mattis, purus dolor luctus felis, a feugiat nisi risus vitae massa. Ut pellentesque dapibus odio, vel sodales orci dictum at. Pellentesque non est non nisl imperdiet vulputate.</p>
-
-                               <p style="font-weight: bold;">In viverra quam ullamcorper elit congue, nec luctus quam scelerisque. Praesent ex ante, vestibulum quis imperdiet sed, efficitur a magna. Maecenas laoreet massa turpis, at molestie felis tempus sed. Suspendisse fringilla quam sed libero lacinia, quis dignissim arcu pulvinar. Vestibulum auctor pellentesque sollicitudin. Mauris dolor dolor, viverra sed nisi et, porta tincidunt arcu. Phasellus imperdiet nisl ex, at ullamcorper neque volutpat eget. Ut convallis finibus nulla nec convallis. Phasellus sodales vel diam nec cursus. Quisque venenatis lobortis mauris. Ut vestibulum lacus aliquam, varius erat vel, maximus lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ultrices a purus vel dignissim. </p>
+                               <p id='event-text' style="font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit cursus dui, non lobortis diam luctus eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam sit amet mi eget magna tristique malesuada. Curabitur non ligula id neque tincidunt consequat ut sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque dapibus ut lectus ac tempus. Nunc non felis velit.</p>
+                               
                             </div>
                           </div>
                       </div>
@@ -305,9 +298,11 @@
         <script src="js/main.js"></script>
 
         <script type="text/javascript">
-          $("#discover").on("click",function(e){
-            $("#hidden-li").click()
-          })
+          // function loadevent()
+          
+          // $("#discover").on("click",function(e){
+          //   $("#hidden-li").click()
+          // })
         </script>
 
     </body>

@@ -87,9 +87,6 @@ function addEvent() {
 
     sponstr = sponstr.slice(0, -1);
 
-    console.log(volstr)
-    console.log(sponstr)
-
     if (currentPhotoUrl == "") {
         alert("Please upload image first")
         return;
@@ -117,6 +114,9 @@ function addEvent() {
     sponelem.innerHTML = sponstr;
     rootElem.appendChild(sponelem);
 
+    var longtextelem = doc.createElement("longtext");
+    longtextelem.innerHTML = document.getElementById("event_descr_long").value
+    rootElem.appendChild(longtextelem);
 
     doc.appendChild(rootElem);
     var str = new XMLSerializer().serializeToString(doc);
@@ -124,6 +124,8 @@ function addEvent() {
     var data = {
         doc: str
     }
+
+    // console.log(data)
 
     $.ajax({
         async: true,
@@ -198,6 +200,7 @@ function assignevent() {
 $(document).ready(function () {
     document.getElementById("event_descr").value = "";
     document.getElementById("heading").value = "";
+    document.getElementById("event_descr_long").value = "";
     $.ajax({
         async: false,
         url: "/api/utility/allsponsor",
